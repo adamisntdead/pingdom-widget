@@ -1,0 +1,25 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Pingdom plugin for Craft CMS
+ *
+ * PingdomWidget Widget Body
+ *
+ * @author    Adam Kelly
+ * @copyright Copyright (c) 2018 Adam Kelly
+ * @link      https://adamisntdead.com
+ * @package   Pingdom
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@adamisntdead/pingdom/assetbundles/pingdomwidgetwidget/dist', true) ~ '/img/PingdomWidget-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+{% if error %}
+<p> There was an error with this widgets settings</p>
+{% else %}
+<p>Uptime: {{ uptime }}%</p>
+<p>Average Response: {{ avgresponse }}ms</p>
+{% endif %}

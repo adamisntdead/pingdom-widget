@@ -1,0 +1,41 @@
+{
+    "name": "adamisntdead/pingdom",
+    "description": "A Widget To Show Stats From Pingdom On The Dashboard",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "pingdom"
+    ],
+    "support": {
+        "docs": "https://github.com/adamisntdead/pingdom/blob/master/README.md",
+        "issues": "https://github.com/adamisntdead/pingdom/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Kelly",
+            "homepage": "https://adamisntdead.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "sgrodzicki/pingdom": "1.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+          "adamisntdead\\pingdom\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Pingdom",
+        "handle": "pingdom",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/adamisntdead/pingdom/master/CHANGELOG.md",
+        "class": "adamisntdead\\pingdom\\Pingdom"
+    }
+}

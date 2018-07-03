@@ -1,0 +1,49 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Pingdom plugin for Craft CMS
+ *
+ * PingdomWidget Widget Settings
+ *
+ * @author    Adam Kelly
+ * @copyright Copyright (c) 2018 Adam Kelly
+ * @link      https://adamisntdead.com
+ * @package   Pingdom
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Email',
+    instructions: 'Enter your pingdom account email here.',
+    id: 'email',
+    name: 'email',
+    value: widget['email']})
+}}
+
+{{ forms.textField({
+    label: 'Password',
+    instructions: 'Enter your pingdom account password here.',
+    id: 'password',
+    name: 'password',
+    value: widget['password']})
+}}
+
+{{ forms.textField({
+    label: 'App Key',
+    instructions: 'Enter your pingdom app key here.',
+    id: 'app_key',
+    name: 'app_key',
+    value: widget['app_key']})
+}}
+
+{{ forms.textField({
+    label: 'Website',
+    instructions: 'Enter site name, as it appears on pingdom',
+    placeholder: 'www.example.com',
+    id: 'website',
+    name: 'website',
+    value: widget['website']})
+}}
